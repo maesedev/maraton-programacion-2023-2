@@ -31,15 +31,17 @@ def getItem(list,index):
 
 
 
+COUNTER_list = [] 
 while True:
     encrypted_line = input()
     [message,counter]  = decode_message(encrypted_line)
 
-
     if message == "pFIN":
         break
+    COUNTER_list.append(counter)
     print(message)
-    print(counter)
+for item in COUNTER_list:
+    print(item)
 
 
 """
